@@ -1,0 +1,16 @@
+{% if numbers_list %}
+    <table border=1>
+    <caption>Database content:</caption>
+    <thead><td>Number</td>
+        <td>English</td>
+        <td>Spanish</td></thead>
+    <tbody>
+    {% for n in numbers_list %}
+	<tr><td>{{ n.number }}</td>
+            <td>{{ n.english_name }}</td>
+            <td>{{ n.spanish_name }}</td></tr>
+    {% endfor %}
+    </tbody></table>
+{% else %}
+    <p>No numbers.</p>
+{% endif %}
